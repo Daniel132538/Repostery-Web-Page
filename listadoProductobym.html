@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="icon" type="image/x-icon" href="imagenes/titulo.png" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de productos</title>
+</head>
+<body>
+    <h1>Listado de productos</h1>
+	<table border="1">
+		<tr>
+            <th>ID</th>
+			<th>Nombre</th>
+			<th>Precio</th>
+			<th>Imagen</th>
+		</tr>
+		##fila##
+		<tr>
+			<td>##idproducto##</td>
+			<td>##nombre##</td>
+			<td>##precio##</td>
+            <td><img src="imagenes/##imagen##" width="150" height="150"></td>
+            <td><a href="index.php?accion=producto&id=5&idproducto=##idproducto##">Modificar</a></td>
+			<td><a href="index.php?accion=producto&id=7&idproducto=##idproducto##">Eliminar</a></td>
+		</tr>
+		##fila##
+	</table>
+	<a href="menuAdmin.html">Volver</a>
+</body>
+</html>

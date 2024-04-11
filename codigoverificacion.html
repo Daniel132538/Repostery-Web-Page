@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/x-icon" href="imagenes/titulo.png" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codigo verificación</title>
+    <style>
+        label, input{
+        font-size: 28px;
+        vertical-align: middle;
+    }
+        .padre {
+    background-color: rosybrown;
+    margin: 1rem;
+    padding: 1rem;
+    border: 2px solid rosybrown;
+    /* IMPORTANTE */
+    text-align: center;
+    }
+    body{
+        background-color: rosybrown;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class = "padre">
+        <form action="index.php?accion=registro&id=4" method="post">
+            <h2>CODIGO DE VERIFICACIÓN</h2>
+            <input name="input0" oninput="maxLengthCheck(this)" type = "number" maxlength = "1" min = "0" max = "9" /> 
+            <input name="input1" oninput="maxLengthCheck(this)" type = "number" maxlength = "1" min = "0" max = "9" /> 
+            <input name="input2" oninput="maxLengthCheck(this)" type = "number" maxlength = "1" min = "0" max = "9" /> 
+            <input name="input3" oninput="maxLengthCheck(this)" type = "number" maxlength = "1" min = "0" max = "9" /> 
+            <input type="hidden" value = "##input1##" name="Nombre" id="Nombre" maxlength="30" >
+            <input type="hidden" value = "##input2##" name="Apellido1" id="Apellido1"  maxlength="30">
+            <input type="hidden" value = "##input3##" name="Apellido2" id="Apellido2" maxlength="30">
+            <input type="hidden" value = "##input4##" name="email" id="email"  maxlength="75">
+            <input type="hidden" value = "##input5##" name="password" id="password" maxlength="30">
+            <input type="hidden" value = "##input6##" name="password2" id="password2"  maxlength="30">
+            <input type="hidden" value = "##input7##" name="direccion" id="direccion"  maxlength="100"> 
+            <input type="hidden" value = "##input8##" name="telefono" id="telefono" maxlength="9">
+            <br><br>
+            <div class="form-group">
+                <input id = "boton" type="submit" name="Aceptar" class="btn btn-info btn-md" value="Aceptar">
+            </div>
+            <br>
+        </form>
+        <br>
+        <p  value="Introduzca el codigo que le hemos enviado"></p>
+        <br>
+        <a href="index.php">Volver a la pagina principal</a>
+    </div>
+    <script> 
+    function maxLengthCheck(object) { 
+        if (object.value.length > object.maxLength) 
+            object.value = object.value.slice(0, object.maxLength) }
+    </script>
+
+
+
+</body>
+</html>

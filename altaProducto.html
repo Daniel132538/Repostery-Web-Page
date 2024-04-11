@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" type="image/x-icon" href="imagenes/titulo.png" />
+	<meta charset="utf-8">
+	<title>Alta de producto</title>
+</head>
+<body>
+	<h1>Alta de producto</h1>
+	<form action="index.php" method="post" enctype="multipart/form-data">
+		<label for="idnombre">Nombre del producto : </label><input type="text" name="nombre" id="idnombre" maxlength="50"><br>
+		<label for="apellido1">Precio(en €) :</label> <input type="text" name="precio" maxlength="5"><br>
+		<label for="apellido2">Imagen :</label> <input type="file" name="fichero" maxlength="100"><br>
+        <input type="hidden" name="accion" value="producto">
+		<input type="hidden" name="id" value="2">
+		<input type="submit" name="Enviar" value="Dar de alta">
+	</form>
+	<a href="menuAdmin.html">Volver</a>
+</body>
+</html>

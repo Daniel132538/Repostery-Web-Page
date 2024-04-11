@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" type="image/x-icon" href="imagenes/titulo.png" />
+	<meta charset="utf-8">
+	<title>Modificar usuario</title>
+</head>
+<body>
+	<h1>Modificar usuario</h1>
+	<form action="index.php" method="post" enctype="multipart/form-data">
+		<label for="idnombre">Nombre : </label><input type="text" name="nombre" id="idnombre" maxlength="30" value = "##nombre##"><br>
+		<label for="apellido1">Primer apellido :</label> <input type="text" name="apellido1" maxlength="30" value = "##apellido1##"><br>
+		<label for="apellido2">Segundo apellido :</label> <input type="text" name="apellido2" maxlength="30" value = "##apellido2##"><br>
+        <label for="contraseña">Contraseña :</label> <input type="password" name="contraseña" maxlength="30" value = "##contraseña##"><br>
+		<label for="email">Correo electrónico :</label> <input type="text" name="email" maxlength="50" value = "##email##"><br>
+		<label for="telefono">Teléfono :</label> <input type="text" name="telefono" maxlength="9" value = "##telefono##"><br>
+        <label for="direccion">Direccion :</label> <input type="text" name="direccion" maxlength="100" value = "##direccion##"><br>
+		<select name="idrol">
+			<option value="0">Seleccione un rol</option>
+			##fila##
+			<option value="##idrol##" ##seleccionado##>##rol##</option>
+			##fila##	
+		</select><br>		
+        <input type="hidden" name="accion" value="usuario">
+		<input type="hidden" name="id" value="6">
+        <input type="hidden" name="idusuario" value="##idusuario##">
+		<input type="submit" name="Enviar" value="Modificar">
+	</form>
+	<a href="menuAdmin.html">Volver</a>
+</body>
+</html>

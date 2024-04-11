@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <link rel="icon" type="image/x-icon" href="imagenes/titulo.png" />
+    
+    <!------ Include the above in your HEAD tag ---------->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Registroverifiacion</title>
+        <meta name="description" content="Resto">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- External CSS -->
+        <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="vendor/select2/select2.min.css">
+        <link rel="stylesheet" href="vendor/owlcarousel/owl.carousel.min.css">
+        <link rel="stylesheet" href="https://cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/brands.css">
+    
+        <!-- Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Josefin+Sans:300,400,700">
+        <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/style.min.css">
+    
+        <!-- Modernizr JS for IE8 support of HTML5 elements and media queries -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    </head>
+</head>
+<body>
+    <br><br><br><br><br><br><br>
+    <div id="login">
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form  action="index.php?accion=registro&id=3" method="post">
+                            <h3 class="text-center text-info">Todos los datos han sido introducidos correctamente</h3><br>
+                            <h3 class="text-center text-info">Importante!! Obten el codigo de verificación</h3><br>
+                            <input type="hidden" value = "##input1##" name="Nombre" id="Nombre" maxlength="30" >
+                            <input type="hidden" value = "##input2##" name="Apellido1" id="Apellido1"  maxlength="30">
+                            <input type="hidden" value = "##input3##" name="Apellido2" id="Apellido2" maxlength="30">
+                            <input type="hidden" value = "##input4##" name="email" id="email"  maxlength="75">
+                            <input type="hidden" value = "##input5##" name="password" id="password" maxlength="30">
+                            <input type="hidden" value = "##input6##" name="password2" id="password2"  maxlength="30">
+                            <input type="hidden" value = "##input7##" name="direccion" id="direccion"  maxlength="100"> 
+                            <input type="hidden" value = "##input8##" name="telefono" id="telefono" maxlength="9">
+                            <input type="hidden" id ="codigo0" name="codigo0">
+                            <input type="hidden" id ="codigo1" name="codigo1">
+                            <input type="hidden" id ="codigo2" name="codigo2">
+                            <input type="hidden" id ="codigo3" name="codigo3">
+                            <br><br>
+                            <div class="form-group">
+                                <input id = "" type="submit" name="Register" class="btn btn-info btn-md" value="Seguir registrando">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <div id="login">
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <div class="form-group">
+                            <input id = "boton" type="submit" name="Register" class="btn btn-info btn-md" value="Recibir codigo de verificacion de email">
+                        </div>
+                        <div id="register-link" class="text-right">
+                            <a href="index.php" class="text-info">Volver a la pagina principal</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <script>
+        document.getElementById("boton").onclick = function(){
+        var codigo = [];
+        for (var i = 0; i < 4; i++) {
+            numero = Math.round((Math.random()*654) % 10);
+            if (numero == 10){
+                numero--;
+            }
+            document.getElementById("codigo" + i).value = numero;
+            codigo.push(numero);
+        }
+        console.log(codigo);
+        var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+            myHeaders.append("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJub25jZSI6IlpmdDJwZGpvYlcweTJGT2M4LV9RWmhzcVRta2hIVk0tNzB2MnRmRVo4VTQiLCJhbGciOiJSUzI1NiIsIng1dCI6ImpTMVhvMU9XRGpfNTJ2YndHTmd2UU8yVnpNYyIsImtpZCI6ImpTMVhvMU9XRGpfNTJ2YndHTmd2UU8yVnpNYyJ9.eyJhdWQiOiIwMDAwMDAwMy0wMDAwLTAwMDAtYzAwMC0wMDAwMDAwMDAwMDAiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC8wZjhlYTBkYy00ZTNiLTQxYjUtYmY5Zi1jNjllODcxNmIzZmIvIiwiaWF0IjoxNjU0MTk4NTMzLCJuYmYiOjE2NTQxOTg1MzMsImV4cCI6MTY1NDIwMzMzMiwiYWNjdCI6MCwiYWNyIjoiMSIsImFpbyI6IkFWUUFxLzhUQUFBQXJKT2g1RGZTekkrZndLajRmVXpUem1RakhmVTVVUXdyL1BJUnQycE9PYmF0QjZJbEFaeG1PaE5jMitMUGdtZE9lNExCWWpnY3g5ODlxVFZCdERENjgyOTRRQlNjWXpsRjNrdSs2NU5Tem5RPSIsImFtciI6WyJwd2QiLCJtZmEiXSwiYXBwX2Rpc3BsYXluYW1lIjoiR3JhcGggRXhwbG9yZXIiLCJhcHBpZCI6ImRlOGJjOGI1LWQ5ZjktNDhiMS1hOGFkLWI3NDhkYTcyNTA2NCIsImFwcGlkYWNyIjoiMCIsImZhbWlseV9uYW1lIjoiQ2FtcG8iLCJnaXZlbl9uYW1lIjoiRGFuaWVsIiwiaWR0eXAiOiJ1c2VyIiwiaXBhZGRyIjoiODcuMjIwLjExMi43MSIsIm5hbWUiOiJEYW5pZWwgQ2FtcG8iLCJvaWQiOiI0NmUzMjFiNC1lODJmLTQzNGYtYmRlNC04Y2UwZmQ4MzU0MjgiLCJwbGF0ZiI6IjMiLCJwdWlkIjoiMTAwMzIwMDFGNzRFNjgzNSIsInJoIjoiMC5BWUlBM0tDT0R6dE90VUdfbjhhZWh4YXotd01BQUFBQUFBQUF3QUFBQUFBQUFBQ1ZBTEkuIiwic2NwIjoiTWFpbC5TZW5kIG9wZW5pZCBwcm9maWxlIFVzZXIuUmVhZCBlbWFpbCIsInN1YiI6ImJ5aXprOTFEY3MzNTZqT3ZTTU9oOVFaRy1USDhTSDEySjliWE82U2hrb1kiLCJ0ZW5hbnRfcmVnaW9uX3Njb3BlIjoiRVUiLCJ0aWQiOiIwZjhlYTBkYy00ZTNiLTQxYjUtYmY5Zi1jNjllODcxNmIzZmIiLCJ1bmlxdWVfbmFtZSI6ImRhbmltaWd1ZWxzaXdAZGFuaW1pZ3VlbC5vbm1pY3Jvc29mdC5jb20iLCJ1cG4iOiJkYW5pbWlndWVsc2l3QGRhbmltaWd1ZWwub25taWNyb3NvZnQuY29tIiwidXRpIjoiRDljWERZRDJLMFdMd1IwR0JPclpBQSIsInZlciI6IjEuMCIsIndpZHMiOlsiNjJlOTAzOTQtNjlmNS00MjM3LTkxOTAtMDEyMTc3MTQ1ZTEwIiwiYjc5ZmJmNGQtM2VmOS00Njg5LTgxNDMtNzZiMTk0ZTg1NTA5Il0sInhtc19zdCI6eyJzdWIiOiItNVMzMlJFdllnN0dOLWZ3MHQzNEd4QUg3NEVpbzVrUUp3a09vLVVlTWhRIn0sInhtc190Y2R0IjoxNjUxNzkyNDUyfQ.Da32E4Rg0rsKfgRdCR0cZ045KSl8hPIywHH4w34emvH95tqqtAoMkp1onNKdpLsA5FVPoFAojZXkI-kpaluqMA_HtsyEBneZDOX7tc-Ah5dTLsz6cmnFR_MU-vZUVrre0L2uCSoGGQBTI1RboU36Wqygw4mo-wk-OqwdLnpUqDDZciPDMyxfcm5nb7y6HuliYwufV9hY3q-S6VZLBWwQI5TphRZS38zxFvo2AwMw-k5ObXmJl9nfDr9zXsEjsXvXuQRXbV75tP2b2cdE8W_zOurSkJoRDP0BbZHsczXX_muPcn03T_uFAumwBDX_k0tNAK_RMkquje-eUxBHs1L-7g");
+            
+            var raw = JSON.stringify({
+            "message": {
+                "subject": "Codigo verificacion Quark Reposteria",
+                "body": {
+                "contentType": "Text",
+                "content": "Su codigo de verificacion es " + codigo[0] + codigo[1] + codigo[2] + codigo[3] + " . Muchas gracias por registrarte en nuestra web."
+                },
+                "toRecipients": [
+                {
+                    "emailAddress": {
+                    "address": document.getElementById("email").value
+                    }
+                }
+                ],
+            },
+            });
+
+            var requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow'
+            };
+
+            fetch("https://graph.microsoft.com/v1.0/me/sendMail", requestOptions)
+            .then(response => response.text())
+            .then(result => console.log(result))
+            .catch(error => console.log('error', error));
+    }
+
+    </script>
+</body>
+</html>

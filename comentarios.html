@@ -1,0 +1,29 @@
+    <!-- Contenedor Principal -->
+	<div class="comments-container">
+		<h1>Comentarios </h1>
+        ##fila##
+		<ul id="comments-list" class="comments-list">
+			<li>
+				<div class="comment-main-level">
+					<!-- Avatar -->
+					<div class="comment-avatar"><img src="imagenes/nofotodeperfil.jpg"></div>
+					<!-- Contenedor del Comentario -->
+					<div class="comment-box">
+						<div class="comment-head">
+							<h6>##nombre##</h6>
+							<span>##fecha##</span>
+							<i class="fa fa-reply"></i>
+							<i class="fa fa-heart"></i>
+						</div>
+						<div class="comment-content">
+							##comentario##
+						</div>
+					</div>
+				</div>
+		</ul>
+        ##fila##
+	</div>
+    <div id="respond" class="comment-respond">
+    <h3 id="reply-title" class="comment-reply-title">Dejar un comentario <small><a rel="nofollow" id="cancel-comment-reply-link" href="/blog/comentar-en-html-y-en-otros-lenguajes-de-programacion/#respond" style="display:none;"></a></small></h3>
+    <p class="comment-notes"></p><p><textarea id= "textarea" maxlength = '450' placeholder="Empieza a escribir..." id="comment" class="form-control" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>
+    <p class="form-submit"><input name="submit" type="submit" id="commentsubmit" class="submit" onClick = "cargarnuevocomentario();" value="Publicar el comentario" />

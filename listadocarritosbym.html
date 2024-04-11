@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="icon" type="image/x-icon" href="imagenes/titulo.png" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de carritos</title>
+</head>
+<body>
+    <h1>Listado de carritos</h1>
+	<table border="1">
+		<tr>
+			<th>Nombre usuario</th>
+			<th>Email</th>
+			<th>Precio total</th>
+			<th>Fecha y hora del pedido</th>
+		</tr>
+		##fila##
+		<tr>
+			<td>##nombre##</td>
+			<td>##email##</td>
+			<td>##preciototal## €</td>
+			<td>##fecha##</td>
+	        <td><a href="index.php?accion=carrito&id=3&idcarrito=##idcarrito##">Eliminar</a></td>
+		</tr>
+		##fila##
+	</table>
+	<a href="menuAdmin.html">Volver</a>
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        function cargarmetodopago(){
+            var valor = $("#seleccionarcomunidad").val();
+            if (valor == 0){
+                $("#divmetodopago").html("");
+            }else if (valor == 1){
+                $.ajax({
+                    type: "GET",
+                    url: "index.php?accion=metodopago&id=1",
+                    success: function (response) {
+                        $("#divmetodopago").html(response);
+                    }
+                });
+            } else if (valor == 2){
+                $.ajax({
+                    type: "GET",
+                    url: "index.php?accion=metodopago&id=2",
+                    success: function (response) {
+                        $("#divmetodopago").html(response);
+                    }
+                });
+            }
+        }
+    </script>
+</head>
+<body>
+    <br>
+    Metodo de pago:
+    <select onchange="cargarmetodopago();" id="seleccionarcomunidad">
+		<option value=0>Seleccione un metodo de pago</option>
+		<option value=1>Tarjeta de crédito</option>
+        <option value=2>Paypal</option>
+    </select><br>
+    <div id = "divmetodopago"></div><br>
+    <a type = "button" href = "index.php?accion=pedido&id=1"> Finalizar pedido </a><br>
+    <!--<input type = "button" value = "Finalizar pedido" href="index.php?accion=pedido&id=1">-->
+</body>
+</html>

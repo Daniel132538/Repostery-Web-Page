@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" type="image/x-icon" href="imagenes/titulo.png" />
+	<meta charset="utf-8">
+	<title>Eliminar producto</title>
+</head>
+<body>
+	<h1>Eliminar producto</h1>
+	<form action="index.php" method="post" enctype="multipart/form-data">
+		<label for="idnombre">Nombre del producto : </label><input type="text" name="nombre" id="idnombre" maxlength="50" value = "##nombre##" ><br>
+		<label for="apellido1">Precio(en €) :</label> <input type="text" name="precio" maxlength="5" value = "##precio##" ><br>
+		<label for="apellido2">Imagen :</label> <input type="file" name="fichero" maxlength="100" value = "##imagen##" ><br>
+        <input type="hidden" name="accion" value="producto">
+		<input type="hidden" name="id" value="8">
+        <input type="hidden" name="idproducto" value="##idproducto##">
+		<input type="submit" name="Enviar" value="Eliminar">
+	</form>
+	<a href="menuAdmin.html">Volver</a>
+</body>
+</html>
